@@ -19,8 +19,8 @@
     --warning: #FAD202;
 
     /* background images */
-    --hero-img-desktop: url('/assets/laptop-home-office.jpg');
-    --bg-image-desktop: url('/assets/simple-shiny-5.svg');
+    --hero-img-desktop: url('.../assets/laptop-home-office.jpg');
+    --bg-image-desktop: url('.../assets/simple-shiny-5.svg');
 }
 
 /* reset default values */
