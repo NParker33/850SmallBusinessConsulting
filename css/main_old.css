@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+:root {
+    /* Font sizes */
+    --main-text: 1.8rem;
+    --main-heading: calc(var(--main-text) * 4);
+    --subheading: calc(var(--main-text) * 2.5);
+    --primary-color: rgb(242 255 246);
+    --main-color: #35F2C6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+/*     border: 1px solid; */
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+}
+
+main {
+    height: 100%;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+}
+
+header {
+    height: clamp(220px, 33%, 295px);
+}
+
+.hero {
+    width: 100%;
+    height: 100%;
+    background: url('/assets/laptop-home-office.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+section {
+    padding: 20px;
+    width: 100%;
+}
+
+#main-content {
+    text-align: center;
+    background: hsla(138 90% 90%);
+    height: 75%;
+}
+
+#main-content h1 {
+    font-size: clamp(37.5px, 10vw, 54.8px);
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+#main-content p {
+    font-size: 5vw;
+    font-size: clamp(18px, 5vw, 25px);
+    font-weight: 300;
+}
+
+.home-buttons {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    width: 75%;
+    background: rgba(0,0,0,0.5);
+    border-radius: 5px;
+    font-size: 1.7rem;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all ease .3s;
+}
+
+.btn:hover{
+    box-shadow: 7px 7px 15px rgba(0,0,0,0.8);
+    transform: scale(1.02);
+}
+
+.primaryBtn{
+    background: var(--main-color);
+    box-shadow: 2px 2px 15px rgba(0,0,0,0.5);
+    color: #fff;
+}
+
+.secondaryBtn {
+    background: transparent;
+}
+
+#requestConsultBtn,
+#learnMoreBtn {
+    width: clamp(280px, 75%, 360px);
+}
+
+#learnMore {
+    background: var(--primary-color);
+    font-size: var(--main-text);
+}
+
+#learnMore h1 {
+    margin: 20px 0;
+}
+
+#learnMoreDescription {
+    margin: 20px 0;
+}
+
+.cards p {
+    margin: 10px;
+    padding: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+@media screen and (min-width: 768px){
+    header {
+        height: 45%;
+    }
+
+    #main-content {
+        margin: auto;
+    }
+
+    #main-content h1,
+    #main-content p {
+        padding: 0 40px;
+    }
+
+}
+
+@media screen and (min-width: 1024px){
+    .container {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 100vh 100vh;
+    }
+
+    header, #main-content {
+        grid-row: 1;
+    }
+
+    header {
+        grid-column: 8 / -1;
+        height: 100%;
+    }
+
+    .hero {
+        background-size: cover;
+    }
+
+    #main-content {
+        grid-column: 1 / span 7;
+        text-align: left;
+        height: 100%;
+        padding-top: 70px;
+    }
+
+    #main-content h1 {
+        font-weight: 600;
+    }
+
+    #main-content p {
+        margin-top: 50px;
+    }
+
+    .home-buttons {
+        flex-direction: row;
+        padding: 0;
+        margin-top: 50px;
+    }
+
+    #learnMore {
+        grid-row: 2;
+        grid-column: 1 / -1;
+        margin-top: 0;
+    }
+}

@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;600;700&display=swap');
+
+:root {
+    --primary: #F1C980;
+    --bg-color: #FEFBF6;
+    --text-color: #2E2005;
+    --accent: #A280F1;
+
+    /* shades and tints */
+    --primary-L62: #ECB550;
+    --primary-L82: #F6DCAC;
+    --text-L20: #5C400A;
+    --accent-L62: #7F50EC;
+    --accent-L82: #C2ACF6;
+
+    /* notification colors */
+    --success: #64BC26;
+    --error: #EA1601;
+    --warning: #FAD202;
+
+    /* background images */
+    --hero-img-desktop: url('/assets/laptop-home-office.jpg');
+    --bg-image-desktop: url('/assets/simple-shiny-5.svg');
+}
+
+/* reset default values */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+}
+
+section {
+    min-height: 100vh;
+    width: 100%;
+}
+
+#landing {
+    background: var(--hero-img-desktop);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.landing-wrapper {
+    background: rgba(0,0,0,0.8);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#landing-content {
+    text-align: center;
+    padding: 25px;
+    color: var(--bg-color);
+}
+
+#landing-content h1 {
+    margin: 20px;
+    text-transform: uppercase;
+}
+
+#landing-content p {
+    line-height: 1.5;
+}
+
+.landing-buttons {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.btn {
+    text-decoration: none;
+    color: inherit;
+    padding: 15px;
+    width: 75%;
+    text-align: center;
+    margin: 5px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.primaryBtn {
+    background: var(--accent);
+    color: var(--bg-color);
+    box-shadow: 2px 2px 15px rgba(0,0,0,0.5);
+    border: none;
+}
+
+.secondaryBtn {
+    border: 1px solid;
+    color: var(--bg-color);
+}
+
+#learnMore {
+    padding: 50px 20px;
+    background: var(--bg-color);
+}
+
+#learnMore-description {
+    margin: 15px 0;
+}
+
+.benefits {
+    padding: 10px;
+}
+
+.benefits h2 {
+    font-size: 1.2rem;
+    margin: 5px 0;
+}
+
+.benefit-group {
+    margin: 10px 5px;
+}
+
+.learnMore-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}

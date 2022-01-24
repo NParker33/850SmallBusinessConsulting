@@ -1,0 +1,88 @@
+#modal {
+    background: rgba(0,0,0,0.8);
+    position: absolute;
+    width: 100%;
+    height: 115vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+}
+
+.form-box {
+    width: clamp(355px, 95%, 665px);
+    height: 80%;
+    background: #F2FFF6;
+}
+
+.hidden {
+    display: none !important;
+}
+
+form {
+    width: 100%;
+    height: 100%;
+}
+
+#form-title {
+    font-size: 4rem;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    color: rgba(50,50,50);
+}
+
+.form-buttons {
+    width: 100%;
+    align-self: end;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+/*     padding: 25px; */
+}
+
+.form-buttons .btn {
+    margin-bottom: 0;
+}
+
+.form-fields {
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-field {
+    background-color: rgba(196,196,196,0.2);
+    width: 95%;
+    height: 37.37px;
+    margin-left: 10px;
+    margin-top: 25px;
+    border: none;
+    padding-left: 10px;
+    font-size: var(--main-text);
+}
+
+.form-field::placeholder {
+    font-size: var(--main-text);
+    color: rgba(0,0,0,1);
+    padding-left: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+    text-align: left;
+    font-weight: 400;
+}
+
+#comment {
+    margin-bottom: 25px;
+    height: 90.63px;
+    font-family: Arial, sans-serif;
+    padding-top: 10px;
+}
+
+.form-field:focus {
+    outline: 1px solid black;
+}
+
+.form-field:focus::placeholder {
+    color: transparent;
+}
