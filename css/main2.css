@@ -31,6 +31,10 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     min-height: 100vh;
 }
@@ -72,11 +76,11 @@ section {
 }
 
 .landing-buttons {
-    width: 100%;
     padding: 10px;
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
+    width: clamp(205px, 100%, 576px);
 }
 
 .btn {
@@ -89,6 +93,7 @@ section {
     border-radius: 5px;
     cursor: pointer;
     font-weight: 600;
+    transition: all ease .3s;
 }
 
 .primaryBtn {
@@ -98,9 +103,19 @@ section {
     border: none;
 }
 
+.primaryBtn:hover {
+    background: var(--accent-L62);
+    box-shadow: 4px 4px 15px rgba(0,0,0,0.8);
+    transform: scale(1.05);
+}
+
 .secondaryBtn {
     border: 1px solid;
     color: var(--bg-color);
+}
+
+.secondaryBtn:hover {
+    transform: scale(1.05);
 }
 
 #learnMore {
@@ -110,10 +125,13 @@ section {
 
 #learnMore-description {
     margin: 15px 0;
+    width: clamp(300px, 100%, 768px);
+/*     border: 1px solid; */
 }
 
 .benefits {
     padding: 10px;
+/*     border: 1px solid; */
 }
 
 .benefits h2 {
@@ -126,9 +144,98 @@ section {
 }
 
 .learnMore-button {
-    width: 100%;
+    width: clamp(270px, 100%, 384px);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: 20px 0;
+}
+
+#backtoTop {
+    margin: 15px;
+}
+
+@media screen and (min-width: 768px){
+    #landing {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(12, 1fr);
+    }
+    .landing-wrapper {
+        background: rgba(0,0,0,0.4);
+        grid-column: 6 / span 7;
+    }
+    #landing-content {
+        text-align: left;
+    }
+
+    #landing-content h1 {
+        margin-left: 0;
+        font-size: 2rem;
+    }
+
+    #landing-content p {
+        font-size: 1.4rem;
+    }
+
+    .landing-buttons {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: left;
+    }
+
+    .landing-buttons .btn {
+        margin: 10px;
+    }
+
+    #learnMore {
+        background: var(--bg-image-desktop);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .learnMore-button {
+        margin: 20px auto;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .landing-wrapper {
+        align-items: flex-start;
+    }
+
+    .landing-buttons {
+        margin-left: 20px;
+    }
+
+    #learnMore {
+        padding: 5px 20px;
+    }
+
+    #learnMore h1,
+    #learnMore-description {
+        margin: 15px 150px;
+    }
+    
+    #learnMore h1 {
+        font-size: 2.3rem;
+    }
+
+    #learnMore-description,
+    .benefits p {
+        font-size: 1.25rem;
+    }
+
+    .benefits {
+        margin: 0 175px;
+    }
+
+    .benefits h2 {
+        font-size: 1.5rem;
+    }
+    
+    .benefit-group {
+        margin: 35px 10px;
+    }
 }
