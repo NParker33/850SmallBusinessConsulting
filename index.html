@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main2.css">
+    <link rel="stylesheet" href="css/modal2.css">
     <title>Document</title>
 </head>
 <body>
@@ -17,7 +18,7 @@
                 </div>
                 <div class="landing-buttons">
                     <a href="#learnMore" class="btn secondaryBtn" id="learnMoreBtn">Learn More</a>
-                    <a class="btn primaryBtn" id="requestConsultBtn">Request a Consult</a>
+                    <a class="btn primaryBtn requestConsultBtn">Request a Consult</a>
                 </div>
             </div>
         </section>
@@ -47,11 +48,45 @@
                 </div>
 
                 <div class="learnMore-button">
-                    <a class="btn primaryBtn" id="requestConsultBtn">Request a Consult</a>
+                    <a href="#modal" class="btn primaryBtn requestConsultBtn">Request a Consult</a>
                     <a href="#" id="backtoTop">Back to Top</a>
                 </div>
             </div>
         </section>
+
+        <dialog id="modal" class="hidden">
+            <form>
+                <h1>Contact Form</h1>
+                <div class="form-fields">
+                    <div class="input-group">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" placeholder="Name">
+                    </div>
+                    <div class="input-group">
+                        <label for="businessName">Business Name</label>
+                        <input type="text" name="businessName" id="businessName" placeholder="Business Name">
+                    </div>
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <input type="text" name="email" id="email" placeholder="Email">
+                    </div>
+                    <div class="input-group">
+                        <label for="phoneNumber">Phone</label>
+                        <input type="text" name="phoneNumber" id="phoneNumber" placeholder="Phone">
+                    </div>
+                    <div class="input-group">
+                        <label for="comment">Comments</label>
+                        <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Enter message..."></textarea>
+                    </div>
+                </div>
+                <div class="form-buttons">
+                    <a class="btn primaryBtn" id="sendBtn">Send</a>
+                    <a class="btn secondaryBtn" id="cancelBtn">Cancel</a>
+                </div>
+            </form>
+        </dialog>
     </main>
+
+    <script src="js/script2.js"></script>
 </body>
 </html>
