@@ -12,8 +12,7 @@ dialog {
 
 form {
     background: var(--bg-color);
-    height: 90%;
-    width: 95%;
+    height: clamp(500px, 90%, 550px);
     width: clamp(300px, 95%, 400px);
     text-align: center;
     display: flex;
