@@ -160,6 +160,13 @@ section {
     margin: 15px;
 }
 
+.body-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #555;
+}
+
 @media screen and (min-width: 768px){
     #landing {
         display: grid;
@@ -193,11 +200,11 @@ section {
         margin: 10px;
     }
 
-    #learnMore {
+/*     #learnMore {
         background: var(--bg-image-desktop);
         background-size: cover;
         background-repeat: no-repeat;
-    }
+    } */
 
     .learnMore-button {
         margin: 20px auto;
